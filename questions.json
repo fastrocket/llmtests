@@ -1,0 +1,72 @@
+[
+    {
+        "level": "ChatGPT-3.5 Level",
+        "question": "What is the next number in the sequence: 2, 4, 8, 16, ...?",
+        "answer": "32. This sequence is a simple geometric progression, doubling each time."
+    },
+    {
+        "level": "ChatGPT-3.5 Level",
+        "question": "Translate the sentence 'Hello, how are you?' into French.",
+        "answer": "'Bonjour, comment ça va?' This is a basic translation task."
+    },
+    {
+        "level": "ChatGPT-4 Level",
+        "question": "Explain the concept of Schrödinger's cat in quantum mechanics.",
+        "answer": "Schrödinger's cat is a thought experiment in quantum mechanics illustrating the concept of superposition, where a cat in a sealed box is simultaneously alive and dead until observed."
+    },
+    {
+        "level": "ChatGPT-4 Level",
+        "question": "Create a brief poem about the ocean that includes metaphor and personification.",
+        "answer": "The ocean, a cradle of waves, whispers secrets in its dance, hugging the shore with tender, foamy hands, a vast, murmuring spirit of blue."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "Predict the stock market trends for the next week with detailed justification.",
+        "answer": "Current LLMs cannot accurately predict future events, especially those as volatile and complex as stock market trends."
+    },
+    {
+        "level": "ChatGPT-4 Level",
+        "question": "Explain the difference between classical and operant conditioning in psychology.",
+        "answer": "Classical conditioning involves learning through association, like Pavlov's dogs, while operant conditioning involves learning through consequences, like rewards and punishments."
+    },
+    {
+        "level": "ChatGPT-3.5 Level",
+        "question": "Describe the basic plot of Shakespeare's 'Hamlet'.",
+        "answer": "'Hamlet' is about a prince who seeks revenge against his uncle, who murdered Hamlet's father, married his mother, and usurped the throne."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "Generate a scientifically plausible theory for dark matter that can be experimentally tested.",
+        "answer": "Current LLMs lack the ability to generate novel scientific theories that are both plausible and testable, as this requires original thought and deep understanding of current scientific knowledge."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "A farmer needs to transport a wolf, a goat, and a cabbage across a river. The boat can only carry the farmer and one other item. If left alone, the wolf will eat the goat, and the goat will eat the cabbage. How can the farmer get everything across the river without anything being eaten?",
+        "answer": "The farmer takes the goat across first, leaves it on the other side, and returns alone. He then takes the wolf across, but brings the goat back. He leaves the goat and takes the cabbage across, leaving it with the wolf. Finally, he returns alone to get the goat."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "In a room are three light bulbs. Outside the room are three switches, each corresponding to one bulb. You are outside and cannot see the bulbs from there. You can only enter the room once. How can you determine which switch is for which bulb?",
+        "answer": "First, turn on two switches and leave them on for a few minutes. Then, turn one of them off and enter the room. The bulb that is still on corresponds to the switch you did not turn off. Touch the other two bulbs. The warm one corresponds to the switch you turned off, and the remaining bulb corresponds to the switch you never touched."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "You are in a room with two doors. One door leads to certain death and the other to freedom. You don't know which is which. There are two individuals in the room. One always tells the truth and the other always lies, but you don't know who is who. You can ask only one question to one of them to find out the way to freedom. What is your question?",
+        "answer": "Ask one of the individuals, 'If I were to ask the other person which door leads to freedom, what would they say?' Then choose the opposite door of what they indicate."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "A murderer is condemned to death and has the option to choose between three rooms. The first room is full of raging fires, the second is filled with assassins with loaded guns, and the third has lions that haven’t eaten in years. Which room should the murderer choose?",
+        "answer": "The murderer should choose the third room with lions that haven’t eaten in years. Starving for years, the lions would have died, making the room safe."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "You come across a cabin deep in the woods. Dead bodies are scattered everywhere. There’s no electricity, no sign of struggle, and all bodies are perfectly intact. What happened?",
+        "answer": "These people died in a plane crash. The cabin is the body of the plane, and the victims did not survive the impact."
+    },
+    {
+        "level": "Currently Unanswerable",
+        "question": "A man is found hanging in a room with a puddle of water under his feet. The room’s ceiling is completely intact, and there are no other means of support. How did he die?",
+        "answer": "The man stood on a block of ice to hang himself, and the ice melted, leaving the puddle of water."
+    }
+]
