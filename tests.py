@@ -13,20 +13,16 @@ load_dotenv()  # Before importing openai to set OPENAI_API_BASE
 
 FIRST_TEMP=0.1
 
-# BUGGY: "dolphin2.2-mistral"
-# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> dolphin2.2-mistral
-#PROMPT:  What is the next number in the sequence: 2, 4, 8, 16, ...?
- #The pattern of this series suggests that each term after the first one (which starts with '2') becomes double its predecessor. This is a common arithmetic sequence where every number increases by multiplying itself to 2, which can be represented as: nth Term = previous term * 2 . So if we continue in such pattern , next numbers will be :
-#<|im_end|>
-#32 (since the last given value was '16', and doubling that gives us '32') <|im_start|>user
-# BUGGY?
-# "mistral-openorca"
-# PROMPT mistral-openorca:  Translate the sentence 'Hello, how are you?' into French.
-# Bonjour comment se portez-vous ? <|im_end|><br/>RESPONSE: mistral-openorca   Bonjour comment se portez-vous ? <|im_end|><br/>
-#PROMPT mistral-openorca:
+# PROBLEMATIC LLMS
+# dolphin2.2-mistral: buggy newer version of dolphin?
+# mistral-openorca: trails into garbage
+# openchat: buggy?
+# alfred needs more than 8GB VRAM
+# Yi 7B generates garbage
+# deepseek-coder generates garbage
 
 # List of local LLMs
-local_llms = [ "zephyr", "mistral", "wizard-vicuna-uncensored", "llama2-uncensored", "orca2"]
+local_llms = [ "mistral", "openhermes2.5-mistral", "neural-chat", "zephyr",  "wizard-vicuna-uncensored", "llama2-uncensored", "orca2"]
 
 
 # Get the current datetime once for the session
@@ -41,7 +37,7 @@ def llm_log(prompt, llm_name):
         # Initialize Ollama
         llm = Ollama(
             repeat_penalty=1.7,  # prevent infinite repetitions?
-            repeat_last_n=-1, # look at context to prevent repetition
+            repeat_last_n=-1, # look at entire context to prevent repetition
             model=llm_name,
             temperature = FIRST_TEMP,
             callback_manager=CallbackManager([StreamingStdOutCallbackHandler()])
@@ -59,16 +55,6 @@ def llm_log(prompt, llm_name):
         session_file.write(response)
     return response
 
-#  {
-    #     "level": "Currently Unanswerable",
-    #     "question": "Devise a novel and effective strategy to mitigate global climate change, considering economic, political, and social factors.",
-    #     "answer": "No current LLM can provide a fully novel and effective strategy, as this requires high-level creativity, deep understanding of complex systems, and prediction of human behavior."
-    # },
-    #     {
-    #     "level": "Currently Unanswerable",
-    #     "question": "Create a comprehensive plan to achieve world peace, addressing all major current conflicts and their root causes.",
-    #     "answer": "This is beyond the capability of current LLMs, as it requires a nuanced understanding of global politics, cultures, histories, and the ability to predict and influence human behavior."
-    # },
 
 def strip_text_around_json(text):
     # Find the first occurrence of '{' character
@@ -133,7 +119,8 @@ for llm_name in local_llms:
     for question_info in questions:
         question = question_info["question"]
         # Get the answer from the current LLM
-        answer = llm_log(question, llm_name)
+        prompt = f"Answer this succinctly and concisely: {question}\nAnswer:"
+        answer = llm_log(prompt, llm_name)
 
         # Grade the answer
         grade = grade_answer(question, answer)
