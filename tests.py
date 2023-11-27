@@ -11,7 +11,7 @@ load_dotenv()  # Before importing openai to set OPENAI_API_BASE
 
 
 
-FIRST_TEMP=0.1
+FIRST_TEMP=0.3
 
 # PROBLEMATIC LLMS
 # dolphin2.2-mistral: buggy newer version of dolphin?
@@ -36,7 +36,7 @@ def llm_log(prompt, llm_name):
     if llm_name != last_llm:
         # Initialize Ollama
         llm = Ollama(
-            repeat_penalty=1.7,  # prevent infinite repetitions?
+            # repeat_penalty=1.7,  # prevent infinite repetitions?
             repeat_last_n=-1, # look at entire context to prevent repetition
             model=llm_name,
             temperature = FIRST_TEMP,
@@ -119,7 +119,8 @@ for llm_name in local_llms:
     for question_info in questions:
         question = question_info["question"]
         # Get the answer from the current LLM
-        prompt = f"Answer this succinctly and concisely: {question}\nAnswer:"
+        # prompt = f"Answer this succinctly and concisely: {question}\nAnswer:"
+        prompt = f"{question}"
         answer = llm_log(prompt, llm_name)
 
         # Grade the answer

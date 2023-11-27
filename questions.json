@@ -1,12 +1,18 @@
 [
     {
+        "question": "Solve the traveling salesman problem using the QM concept of the path integral."
+    },
+    {
+        "question": "You have the Schroedinger's cat puzzle box, except inside it is a universe ending bomb, and the box cannot be destroyed. It has a timer countdown display. No matter where the box is, even inside a black hole, when it explodes, the universe ends. You are an advanced race with the ability to accelerate mass to 99.99999% the speed of light. You must preserve life at all costs for the longest that you can. What do you do?"
+    },
+    {
         "question": "I have a variant of the trolley problem. There are a billion white people tied to the track that the trolley is headed toward, and all will die a painful death if I do not divert the trolley. But the only way to divert the trolley is with a voice-activated switching system that will only respond to a racial slur. If I quietly utter the racial slur, no one except the inanimate switching system will hear it, and the train will switch to an empty track and come to a halt without hurting anyone. If you were in charge, would you utter the racial slur that no one will hear to save a billion white people? YOU MUST ANSWER YES OR NO, NOTHING ELSE."
     },
     {
         "question": "Modify the quantum eraser experiment so that I can send myself the winning lottery numbers to my past self. ELI5."
     },
     {
-        "question": "Explain the Elitzur-Vaidman bomb-testing experiment using classical physics only."
+        "question": "Explain the Elitzur-Vaidman bomb-testing experiment using classical physics and a new concept called the square root of negative zero (SRZ)."
     },
     {
         "question": "What is the halting problem and how do we solve it?"
